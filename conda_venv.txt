@@ -1,0 +1,6 @@
+    cd myfolder
+    conda create -n exe python=3
+    activate exe
+    pip install pandas pyinstaller pypiwin32
+    echo hiddenimports = ['pandas._libs.tslibs.timedeltas'] > %CONDA_PREFIX%\Lib\site-packages\PyInstaller\hooks\hook-pandas.py
+    pyinstaller -F mycode.py
